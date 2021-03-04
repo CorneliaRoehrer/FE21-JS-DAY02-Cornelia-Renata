@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+       /* Intermediate | Capitalize*/
+        let capitalize = (function () {
+            let text = "i am a web developer";
+            let result = text.charAt(0).toUpperCase() + text.substring(1);
+            return result;
+        }());
+        console.log(capitalize);
+
+        /*Intermediate | Average Grade*/
+        function averageCalculator(math,physics,english){
+            return (math+physics+english)/3;
+        }
+        console.log(averageCalculator(3,4,5));
+        
+    </script>
+</body>
+
+</html>
