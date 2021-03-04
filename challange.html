@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            /*atm machine*/
+        function atmMachine(money) {
+            let banknotesToGive = new Array;
+            // hundreds
+            let extra = money % 100;
+            let hundreds=(money-extra)/100;
+            banknotesToGive.push(hundreds + " notes of 100 EUR, ");
+            // fifties
+            money= money-(hundreds * 100)
+            let extra2 = money % 50;
+            let fifties = (money-extra2)/50;
+            banknotesToGive.push(fifties + " notes of 50 EUR, ");
+            // twenties
+            money= money-(fifties * 50)
+            let extra3 = money % 20;
+            let twenties = (money-extra3)/20;
+            banknotesToGive.push(twenties + " notes of 20 EUR, ");
+            // tens
+            money= money-(twenties * 20)
+            let extra4 = money % 10;
+            let tens = (money-extra4)/10;
+            banknotesToGive.push(tens + " notes of 10 EUR, ");
+
+            return banknotesToGive;
+        }
+
+        console.log(atmMachine(40));
+
+
+            /*atm machine*/
+        // function atmMachine(money) {
+        //     let banknotesToGive = new Array;
+        //     let banknotes = [100, 50, 20, 10];
+        //     let counter = 0;
+        //     let extra = money % banknotes[counter];
+        //     let hundreds=(money-extra)/100;
+        //     while (counter < 4) {
+        //         if (money >= banknotes[counter]) {
+        //             banknotesToGive.push(banknotes[counter]);
+        //             money = money - banknotes[counter];
+        //         }
+        //         else {
+        //             counter++;
+        //         }
+        //     } return banknotesToGive;
+        // }
+        // console.log("given money from atm machine: " + atmMachine(280));
+        
+    </script>
+</body>
+</html>
